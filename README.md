@@ -1,4 +1,4 @@
-# AdmissionSystem
+# College AdmissionSystem
 Web application for student admission system
 
 ## Steps to run the application
