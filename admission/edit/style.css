@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffd699;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #000;
+    font-size: 24xx;
+    font-family: sans-serif;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+}
+input {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+input[type=text] {
+    background: #fff;
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+input[type=submit] {
+    position: relative;
+    left: -5px;
+    border-radius: 0 25px 25px 0;
+    height: 50px;
+    width: 150px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #ff5722;
+    color: #fff;
+}
+input[type=submit]:hover {
+    background: #660066;
+}
+
+
+
+
+/*navigation menu style*/
+
+.main {
+    width: 100%;
+    background: #ff8000;
+}
+
+/*General Menu Styling*/
+.mainnav {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    width: 135px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.dropdown {
+    position: absolute;
+    width: 150px;
+    top: 41px;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease-out .35s;
+    -moz-transition: ease-out .35s;
+    -webkit-transition: ease-out .35s;
+    z-index: 1;
+}
+
+.mainnav li {
+    float: left;
+    padding: 5px;
+    background: #ff8000;
+    border-left: 1px dotted #fff;
+}
+
+.mainnav li:first-child {
+    border: none;
+}
+
+.mainnav li a {
+    display: block;
+    padding: 2px 20px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.mainnav li:hover {
+    background: #fff;
+    transition: ease-in .35s;
+    -moz-transition: ease-in .35s;
+    -webkit-transition: ease-in .35s;
+}
+
+.mainnav li:hover a {
+    color: maroon;
+    transition: ease-in .35s;
+    -moz-transition: ease-in .35s;
+    -webkit-transition: ease-in .35s;
+}
+
+/*First Level*/
+.subs {
+    left: -45px;
+    position: relative;
+    top: 0px;
+    width: 135px;
+    border-left: none !important;
+    border-bottom: 1px dotted #fff !important;
+}
+
+.subs:last-child {
+    border: none !important;
+}
+
+.hassubs:hover .dropdown,
+.hassubs .hassubs:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transition: ease-in .35s;
+    -moz-transition: ease-in .35s;
+    -webkit-transition: ease-in .35s;
+}
+
+.mainnav li:hover ul a,
+.mainnav li:hover ul li ul li a {
+    color: white;
+}
+
+.mainnav li ul li:hover,
+.mainnav li ul li ul li:hover {
+    background: #fff;
+    transition: ease-in-out .35s;
+    -moz-transition: ease-in-out .35s;
+    -webkit-transition: ease-in-out .35s;
+}
+
+.mainnav li ul li:hover a,
+.mainnav li ul li ul li:hover a {
+    color: maroon;
+    transition: ease-in-out .35s;
+    -moz-transition: ease-in-out .35s;
+    -webkit-transition: ease-in-out .35s;
+}
+
+/*Second Level*/
+.hassubs .hassubs .dropdown .subs {
+    left: 23px;
+    position: relative;
+    width: 167px;
+    top: 0px;
+}
+
+.hassubs .hassubs .dropdown {
+    position: absolute;
+    width: 150px;
+    left: 81px;
+    top: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease-out .35s;
+    -moz-transition: ease-out .35s;
+    -webkit-transition: ease-out .35s;
+}
+li.active{
+    background-color: black;
+    color: #ff8000;
+}
+li.active a{
+    color: #ff8000;
+}
+li.sub2{
+    background-color: #ff9900;
+}
+li.right{
+    border-left: none;
+    float: right;
+    width: 90px;
+    background-color: rgba(255,153,0,1);
+}
