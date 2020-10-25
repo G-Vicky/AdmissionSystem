@@ -13,5 +13,5 @@ Web application for student admission system
     5. head to [localhost/AdmissionSystem](http://localhost/AdmissionSystem) for running application
         
   ## Configuring application
-    - change your passwords in *login table* in **admission database**
-    - assign ports in *admission/database/dbconnection.php* if your running apache and mysql in different ports
+  - change your passwords in *login table* in **admission database**
+  - assign ports in *admission/database/dbconnection.php* if your running apache and mysql in different ports
