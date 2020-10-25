@@ -11,6 +11,7 @@ Web application for student admission system
     3. navigate to [localhost/phpmyadmin](http://localhost/phpmyadmin) dashboad
     4. import and run the sql file(database.sql file in admission/database folder)
     5. head to [localhost/AdmissionSystem](http://localhost/AdmissionSystem) for running application
+    6. use *admin* for username and password
         
   ## Configuring application
   - change your passwords in *login table* in **admission database**
