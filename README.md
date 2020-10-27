@@ -23,6 +23,6 @@ Web application for student admission system
   ## :hammer_and_wrench: Configuring application
   - change your passwords in *login table* in **admission database**
   - assign ports and database connection details in *admission/database/dbconnection.php* if your running apache and mysql in different ports
-
+***
  ## :busts_in_silhouette: Maintainers
   - [G-vicky](https://github.com/G-vicky)
