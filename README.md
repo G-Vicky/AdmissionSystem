@@ -20,7 +20,7 @@ Web application for student admission system
   
     Note: application runs on port 8000 and mysql on port 3306
     
-  ## Configuring application
+  ## :hammer_and_wrench: Configuring application
   - change your passwords in *login table* in **admission database**
   - assign ports and database connection details in *admission/database/dbconnection.php* if your running apache and mysql in different ports
 
