@@ -25,4 +25,4 @@ Web application for student admission system
   - assign ports and database connection details in *admission/database/dbconnection.php* if your running apache and mysql in different ports
 
 # :busts_in_silhouette: Maintainers
-  [G-vicky](https://github.com/G-vicky)
+  - [G-vicky](https://github.com/G-vicky)
