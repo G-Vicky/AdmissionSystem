@@ -4,7 +4,7 @@ Web application for student admission system
 ## Pre-requisites
   Xampp / Apache / mysql
 
-  ## Steps to run the application
+  ## :rocket: Steps to run the application
    ### Running in xampp server
   1. start apache and mysql in xampp server
   2. clone this repository to your xampp *htdocs* folder
@@ -23,3 +23,6 @@ Web application for student admission system
   ## Configuring application
   - change your passwords in *login table* in **admission database**
   - assign ports and database connection details in *admission/database/dbconnection.php* if your running apache and mysql in different ports
+
+# :busts_in_silhouette: Maintainers
+  [G-vicky](https://github.com/G-vicky)
