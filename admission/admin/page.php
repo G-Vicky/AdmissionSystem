@@ -4,6 +4,8 @@
         header("Location: ../../index.php");
         exit();
     }
+    include("../database/dbconnection.php");
+    
 ?>
 <!DOCTYPE html>
 <html lang='en' dir='ltr'>
@@ -33,7 +35,7 @@
                 dateFormat: "dd-mm-yy"
             });
         });
-</script>
+    </script>
 
     <div class="main">
         <ul class="mainnav">
@@ -223,7 +225,32 @@
         </div>
     </div>
 <?php
-       if(!isset($_GET['status'])){
+        $conn=new mysqli($servername,$username,$password,$db);
+        if($conn->connect_error){
+                die("Connection error:".$conn->connect_error);
+                exit();
+        }
+        $sql="SELECT * FROM `master`";
+        $admin_record = 0;
+        $result=$conn->query($sql);
+        if($result->num_rows>0){
+            $admin_record = 1; 
+        }
+        if($admin_record == 1) {
+            echo "<script>
+                    Swal(
+                    'Warning',
+                    'record submitted already',
+                    'error'
+                    );
+                    </script>"; 
+        } else {
+            echo "<script>
+            Swal.fire('Fill in details to use the application!');
+            </script>"; 
+        }
+        $conn->close(); 
+        if(!isset($_GET['status'])){
            exit();
        }else{
             $signup=$_GET['status'];

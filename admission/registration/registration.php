@@ -11,14 +11,19 @@
             exit();
     }
     $sql="SELECT * FROM `master`";
+    $admin_record = 0;
      $result=$conn->query($sql);
-     if($result->num_rows>0){       
+     if($result->num_rows>0){
+         $admin_record = 1;       
         while($row=$result->fetch_assoc()){
             $tmax = $row["tmax"];
             $tmin = $row["tmin"];
             $cmax = $row["cmax"];
             $cmin = $row["cmin"];
         }
+    }
+    if($admin_record == 0) {
+        header("Location: ../admin/page.php");
     }
     $conn->close();        
 ?>

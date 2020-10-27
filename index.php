@@ -1,4 +1,5 @@
 <?php
+    ob_start(); 
     session_start();
     if(isset($_SESSION["user"])){
         session_unset();
@@ -13,7 +14,7 @@
         Login
     </title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="/admission/admission/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="./admission/sweetalert2/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,8 @@
                         if(($user == $username) && ($pwd == $password)){
                             if($user == "admin"){
                                 $_SESSION['user'] = "admin";
-                                header("Location: admission/registration/registration.php");
+                                header("Location: ./admission/registration/registration.php");
+                                exit();
                             }
                             elseif($user == "user"){
                                 $_SESSION['user'] = "user";

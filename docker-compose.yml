@@ -1,0 +1,43 @@
+version: "3"
+services:
+    www:
+        container_name: admission_web
+        build: .
+        ports:
+            - "8001:80"
+        volumes:
+            - ./:/var/www/html/
+        links:
+            - db
+        networks:
+            - default
+        image: vicky7274/admissionsystem
+    db:
+        container_name: admission_db
+        image: mysql:8.0.16
+        command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: admission
+            MYSQL_USER: user
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test
+        volumes:
+            - ./admission/database:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        container_name: admission_phpmyadmin
+        image: phpmyadmin/phpmyadmin:4.8
+        links:
+            - db:db
+        ports:
+            - 8000:80
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test
+volumes:
+    persistent:
